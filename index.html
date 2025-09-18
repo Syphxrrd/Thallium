@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thallium</title>
     <link rel="stylesheet" href="/style.css">
+    <!--#include virtualm"/header.html"-->
 </head>
 <body>
-    <header>
-        <b><i>Thallium</i></b> |
-        <a href="/index.html">Main Page</a> |
-        <a href="/htmls/about.html">About Thallium</a> |
-        <a href="/htmls/contact.html">Contact Me</a>
-    </header>
+    <div id="universal-header-placeholder"></div>
+    <script>
+      fetch('/htmls/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('universal-header-placeholder').innerHTML = data;
+        });
+    </script>
     <div class="title">
         <h1>Welcome to Thallium</h1>
     </div>

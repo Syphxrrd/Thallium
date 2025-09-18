@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <b><i>Thallium</i></b> |
-        <a href="/index.html">Main Page</a> |
-        <a href="/htmls/about.html">About Thallium</a> |
-        <a href="/htmls/contact.html">Contact Me</a>
-    </header>
+    <div id="universal-header-placeholder"></div>
+    <script>
+      fetch('/htmls/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('universal-header-placeholder').innerHTML = data;
+        });
+    </script>
     <div class="title">
         <h1>Welcome to Thallium</h1>
     </div>
