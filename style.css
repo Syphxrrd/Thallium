@@ -8,6 +8,11 @@ body {
 }
 
 .title {
-    display : flex;
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle {
+    display: flex;
     justify-content: center;
 }
